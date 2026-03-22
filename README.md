@@ -38,8 +38,8 @@ Get the professional environment running locally in seconds:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/rikixz/khmer-weather-app.git
-   cd khmer-weather-app
+   git clone https://github.com/blaxkmiradev/Khmer-Weather-App.git
+   cd Khmer-Weather-App
    ```
 
 2. **Install dependencies**:
