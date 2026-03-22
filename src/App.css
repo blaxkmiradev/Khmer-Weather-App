@@ -1,0 +1,263 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 4rem 0;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.pro-badge {
+  font-size: 0.7rem;
+  color: var(--primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.5rem;
+}
+
+/* Search Bar */
+.search-wrapper {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  padding: 4px;
+  gap: 4px;
+}
+
+.search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  color: white;
+  font-size: 1.1rem;
+  outline: none;
+  font-family: inherit;
+}
+
+.search-input::placeholder {
+  color: var(--text-dim);
+}
+
+.search-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.search-btn:hover {
+  filter: brightness(1.1);
+}
+
+/* Dashboard */
+.weather-main {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1.5rem;
+}
+
+.hero-panel {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.location-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.location-info .city {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.location-info .country {
+    font-size: 1rem;
+    color: var(--text-dim);
+    font-weight: 500;
+}
+
+.temp-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.temp-large {
+  font-size: 7rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.main-icon {
+  width: 100px;
+  height: 100px;
+  color: var(--primary);
+  stroke-width: 1.5;
+}
+
+.condition-label {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-dim);
+}
+
+/* Stats */
+.stats-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.stat-item {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.stat-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-dim);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.stat-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Forecast */
+.forecast-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.forecast-day {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.day-name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-dim);
+}
+
+.day-icon {
+    width: 48px;
+    height: 48px;
+    color: var(--primary);
+}
+
+.day-temp {
+    display: flex;
+    gap: 0.75rem;
+    align-items: baseline;
+}
+
+.hi { font-weight: 800; font-size: 1.4rem; }
+.lo { color: var(--text-dim); font-size: 1rem; }
+
+/* Footer */
+footer {
+  margin-top: auto;
+  padding: 4rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  border-top: 1px solid var(--glass-border);
+}
+
+.footer-nav {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.footer-nav a {
+  color: var(--text-dim);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.footer-nav a:hover {
+  color: white;
+}
+
+.legal {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  opacity: 0.6;
+}
+
+/* States */
+.loading-box {
+    text-align: center;
+    padding: 5rem;
+    color: var(--text-dim);
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--glass-border);
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: rotate 1s linear infinite;
+    margin: 0 auto 1.5rem;
+}
+
+@keyframes rotate { to { transform: rotate(360deg); } }
+
+@media (max-width: 900px) {
+  .weather-main {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-panel { padding: 2rem; }
+  .temp-large { font-size: 5rem; }
+  .forecast-grid { grid-template-columns: 1fr; }
+}
